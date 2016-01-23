@@ -1,0 +1,49 @@
+@import "compass/css3/transform";
+
+.section{
+	background-color: #FFF;
+	padding: 85px 0;
+	position: relative;
+	&:before, &:after{
+		content: '';
+		display: block;
+		//background-color: rgba(#FF0000, 0.4);
+		background-color: #FFF;
+
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		z-index: 4;
+		
+		@include transform-origin(0, 0);
+		@include transform(skewY(-2deg));
+	}
+	&:after{
+		background-color: #FFF;
+		@include transform-origin(100%, 0);
+	}
+}
+.section-title{
+	@include clearfix;
+	h1{
+		float: left;
+		width: 180px;
+		margin: 0;
+		padding: 0 20px 0 0;
+
+		text-align: right;
+		text-transform: uppercase;
+		color: #000;
+		line-height: 45px;
+
+		border-right: 4px solid $color;
+	}
+	p{
+		float: right;
+		width: 950px;
+		margin: 0;
+		padding: 0;
+
+		line-height: 25px;
+		text-transform: uppercase;
+	}
+}

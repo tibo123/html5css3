@@ -1,0 +1,73 @@
+@import "compass/css3/transition";
+@import "compass/css3/background-size";
+
+.profile{
+    height: 128px;
+    width: 128px;
+    display:block;
+}
+.profile-img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-color: rgba($color, 0.6);
+    border-style: solid;
+    border-radius: 50%;
+	background:url(img/profile128.jpg) no-repeat;
+}
+.header{
+	padding: 70px 0 165px 0;
+
+	color: #FFF;
+	text-align: center;
+
+	background:url(img/background2048.jpg) center top fixed;
+	@include background-size(cover);
+}
+.header-logo{
+	display: block;
+	float: left;
+}
+.header-baseline{
+	margin: 214px 0 80px 0;
+
+	font-weight: 300;
+	font-size: 40px;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+}
+.header-baseline-l{
+	display: block;
+	line-height: 57px;
+}
+.header-baseline-l2{
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 80px;
+}
+.header-baseline-l3{
+	font-size: 40px;
+	line-height: 70px;
+}
+
+/*MENU*/
+
+.menu{
+	margin-top: 65px;
+
+	font-size: 18px;
+	font-weight: 600;
+	text-align: right;
+	float: right;
+}
+.menu-item{
+	@include transition-duration(0.4);
+	&:before{
+		display: inline-block;
+		padding: 0 37px;
+	}
+	&:first-child:before{
+		display: none;
+	}
+	&:hover,&.is-active{ color: #000; }
+}
