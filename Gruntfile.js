@@ -56,6 +56,12 @@ module.exports = function(grunt){
 		      livereload:LIVERELOAD_PORT
 		    }
 		  },
+          html: {
+            // Watch all js in working directory.
+            files: ['site/*.html'],
+            // Check then minify js to dist directory
+            tasks:['copy:html'],
+          },
 		  js: {
 		    // Watch all js in working directory.
 		    files: ['site/js/**/*.js'],
@@ -82,6 +88,14 @@ module.exports = function(grunt){
           }
 		},
 		/* PREPARE DEPLOY TASKS */
+        copy: {
+            html: {
+                files: [
+                  // includes files within path 
+                  {expand: true, cwd:'site/', src: ['*.html'], dest: 'dist/', filter: 'isFile'}
+                ]
+            }
+        },
     	jshint: {
     		all: ['Gruntfile.js', 'site/js/*.js']
   		},
@@ -131,7 +145,7 @@ module.exports = function(grunt){
         },
         concurrent: {
             dev: {
-                tasks: ['watch:site', 'watch:css', 'watch:img', 'watch:imgcss'],
+                tasks: ['watch:site', 'watch:css', 'watch:img', 'watch:imgcss', 'watch:html'],
                 options: {
                     logConcurrentOutput: true
                 }

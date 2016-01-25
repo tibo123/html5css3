@@ -1,0 +1,17 @@
+//@import "compass/layout/sticky-footer";
+
+.footer{
+ //position: relative;
+ //z-index: 10;
+ //height: 3em;
+ //margin-top: -3em;
+
+    height: $footer-height;
+    background-color: $WHITE-BACKGROUND;
+    @include background-size(cover);
+
+    //@include sticky-footer($footer-height);
+
+    //@include transform-origin(100, 0);
+    //@include transform(skewY(-2deg));
+}

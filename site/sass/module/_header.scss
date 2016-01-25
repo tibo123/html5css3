@@ -1,58 +1,74 @@
-@import "compass/css3/transition";
-@import "compass/css3/background-size";
+//@import "compass/css3/transition";
 
-.profile{
-    height: 128px;
-    width: 128px;
-    display:block;
-}
-.profile-img{
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-    border-color: rgba($color, 0.6);
-    border-style: solid;
-    border-radius: 50%;
-	background:url(img/profile128.jpg) no-repeat;
-}
 .header{
-	padding: 70px 0 165px 0;
-
 	color: #FFF;
 	text-align: center;
+	width: 95%;
+	height: $header-height;
 
-	background:url(img/background2048.jpg) center top fixed;
+    border: 1px 1px 0 0 solid $shadow;
+	border-radius: 0 0 5.5125px 0;
+    overflow: hidden;
+	background-color: $BLUE;
 	@include background-size(cover);
+    @include background-image(linear-gradient(to bottom right, $BLUE-DARKER, $BLUE));
+	@include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
 }
-.header-logo{
-	display: block;
-	float: left;
-}
-.header-baseline{
-	margin: 214px 0 80px 0;
 
-	font-weight: 300;
-	font-size: 40px;
-	letter-spacing: -1px;
-	text-transform: uppercase;
+.header-title{
+	color: $text;
+ 	font-weight: 700;
+ 	font-size: 24px;
+ 	letter-spacing: -2px;
+	font-family: 'Roboto', sans-serif;
+ 	text-transform: uppercase;
+
+    margin-left: 5%;
+    margin-right: 5%;
 }
-.header-baseline-l{
-	display: block;
-	line-height: 57px;
+.header-quote{
+	color: $text;
+ 	font-weight: 400;
+ 	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+ 	letter-spacing: -1px;
+ 	text-align: left;
+
+    margin-left: 15%;
+    margin-right: 5%;
+    padding-left: 5%;
+	border-left: 4px solid $YELLOW;
 }
-.header-baseline-l2{
-	font-weight: 700;
-	font-size: 70px;
-	line-height: 80px;
-}
-.header-baseline-l3{
-	font-size: 40px;
-	line-height: 70px;
-}
+
+// .header-logo{
+// 	display: block;
+// 	float: left;
+// }
+// .header-baseline{
+// 	margin: 214px 0 80px 0;
+
+// 	font-weight: 300;
+// 	font-size: 40px;
+// 	letter-spacing: -1px;
+// 	text-transform: uppercase;
+// }
+// .header-baseline-l{
+// 	display: block;
+// 	line-height: 57px;
+// }
+// .header-baseline-l2{
+// 	font-weight: 700;
+// 	font-size: 70px;
+// 	line-height: 80px;
+// }
+// .header-baseline-l3{
+// 	font-size: 40px;
+// 	line-height: 70px;
+// }
 
 /*MENU*/
 
-.menu{
+/* .menu{
 	margin-top: 65px;
 
 	font-size: 18px;
@@ -70,4 +86,4 @@
 		display: none;
 	}
 	&:hover,&.is-active{ color: #000; }
-}
+} */

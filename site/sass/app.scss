@@ -1,14 +1,32 @@
+@import "compass/css3/background-size";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+
 @import "compass/utilities/general/clearfix";
 
-
 /* Variables */
-$color: #f39c12;
+$shadow: rgba(#333333, 0.54);
+$shadow-strong: rgba(#333333, 0.87);
+$text: rgba(#000, 0.54);
+$text-strong: rgba(#000, 0.87);
+/* COLOR THEME */
+$YELLOW: #FDD835;
+$PINK: #e7356e;
+$BLUE: #0277BD;
+$BLUE-DARKER: #01579B;
+$GREEN: #1d9370;
+$PURPLE: #8E24AA;
+$WHITE: #fafafa;
+$WHITE-BACKGROUND: #FAFAFA;
+$profile-height: 128px;
+$header-height: 33.33%;
+$footer-height: 2%;
+$container-height: (100% - $footer-height - $header-height);
 
 @import "base/base";
-
-@import "layout/grid";
-
+@import "layout/responsivegrid";
 @import "module/header";
-@import "module/btn";
+@import "module/profile";
+@import "module/nav";
 @import "module/section";
-
+@import "module/footer";
