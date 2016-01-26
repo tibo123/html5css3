@@ -12,21 +12,22 @@ $text: rgba(#000, 0.54);
 $text-strong: rgba(#000, 0.87);
 $text-offset: 10px!default;
 
-$font-size-header-title: 12px;
-$line-height-header-title: 36px;
+$font-size-header-title: 22px;
+// $line-height-header-title: 36px;
 
-$font-size-header-quote: 10px;
-$line-height-header-quote: 16px;
+$font-size-header-quote: 14px;
+// $line-height-header-quote: 16px;
+
+$background-img: 'pepper320.jpg';
 
 /* COLOR THEME */
-$YELLOW: #FDD835;
-$PINK: #e7356e;
-$BLUE: #0277BD;
-$BLUE-DARKER: #01579B;
-$GREEN: #1d9370;
-$PURPLE: #8E24AA;
-$WHITE: #fafafa;
-$WHITE-BACKGROUND: #FAFAFA;
+$yellow: #FDD835;
+$pink: #e7356e;
+$blue: #0277BD;
+$blue-darker: #01579B;
+$green: #1d9370;
+$purple: #8E24AA;
+$white: #fafafa;
 
 $profile-size: 64px;
 $header-height: 13%;

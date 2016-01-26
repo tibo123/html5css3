@@ -1,45 +1,43 @@
 //@import "compass/css3/transition";
 
 .header{
-	color: #FFF;	
+	// color: $text;
 	height: $header-height;
-	//min-height:135px;
-	margin-right: 5%;
-	padding-right: 5%;
-	padding-left: 5%;
+	// margin-right: 5%;
+	// padding-right: 5%;
+	// padding-left: 5%;
     border: 1px 1px 0 0 solid $shadow;
-	border-radius: 0 0 5.5125px 0;
     overflow: hidden;
-	background-color: $BLUE;
+
+	background:url(img/$background-img) top;
 	@include background-size(cover);
-    @include background-image(linear-gradient(to bottom right, $BLUE-DARKER, $BLUE));
 	@include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
+
+	@include clearfix;
 }
 
-.header-title{
-	color: $text;
- 	font-weight: 700;
- 	font-size: $font-size-header-title;
-	font-family: 'Roboto', sans-serif;
- 	letter-spacing: -2px;
- 	text-transform: uppercase;
-	text-align: center;
- 	line-height: $line-height-header-title;
-    & > h1{
-    	margin-top: 0;
-    	margin-bottom: 0;
-    }
-}
-.header-quote{
-	color: $text;
- 	font-weight: 400;
- 	font-size: $font-size-header-quote;
- 	line-height: $line-height-header-quote;
-	font-family: 'Open Sans', sans-serif;
- 	letter-spacing: -1px;
+.header-content{
  	text-align: left;
-    padding-right: $profile-size;
-    padding-left: $text-offset;
-    margin-left: $profile-size;
-	border-left: 4px solid $YELLOW;
+	position: relative;
+
+    & .header-title{
+        margin-top: 2px;
+        margin-left: 25%;
+
+        border-left: 4px solid $blue-darker;
+        background-color: rgba($white, 1); 
+    }
+    & .header-quote{
+        font-weight: 400;
+        font-size: $font-size-header-quote;
+        // font-family: 'Open Sans', sans-serif;
+        letter-spacing: -1px;
+
+        margin-top: 2px;
+        margin-left: 25%;
+        padding-left: 2%;
+
+        border-left: 4px solid $blue-darker;
+        background-color: rgba($white, 1); 
+    }
 }

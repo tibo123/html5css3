@@ -7,7 +7,7 @@
  //margin-top: -3em;
 
     height: $footer-height;
-    background-color: $WHITE-BACKGROUND;
+    background-color: $white;
     @include background-size(cover);
 
     //@include sticky-footer($footer-height);

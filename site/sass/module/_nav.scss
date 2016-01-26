@@ -6,14 +6,15 @@
         color: $text;
         background-color: #{$color-value};
         @include background-image(linear-gradient(to bottom right, $color-value, $shadow));
-        @include single-box-shadow(4px, 4px, 20px, -6px, $shadow);
+        // @include single-box-shadow(4px, 4px, 20px, 3px, $shadow);
+    // @include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
     }
 }
 
 .nav{
     width: 95%;
     border-radius: 0 0 11.25px 0;
-    background-color: rgba($WHITE,0.6);
+    background-color: rgba($white,0.6);
     overflow: hidden;
 
     @include background-size(cover);
@@ -54,11 +55,11 @@
         width: 100%;
     }
 
-    @include color-new('green', $GREEN);
-    @include color-new('pink', $PINK);
-    @include color-new('blue', $BLUE);
-    @include color-new('yellow', $YELLOW);
-    @include color-new('purple', $PURPLE);
+    @include color-new('green', $green);
+    @include color-new('pink', $pink);
+    @include color-new('blue', $blue);
+    @include color-new('yellow', $yellow);
+    @include color-new('purple', $purple);
 
     @include clearfix;
 }
