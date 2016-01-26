@@ -5,8 +5,8 @@ $medium: 640px;
 $large: 1024px;
 .container{
 	min-height: $container-height;
-	margin-top: -($profile-height / 2);
-	padding-top: ($profile-height / 2);
+	margin-top: -($profile-size / 2);
+	padding-top: ($profile-size / 2);
 	position: relative;
 	@include clearfix;
 }
@@ -17,7 +17,6 @@ $large: 1024px;
 			.col-#{$suffix}-#{$i}{ width: $i / $columns * 100%; }
 		}
 		.col-#{$suffix}-push-#{$i}{ left: $i / $columns * 100%; }
-		.col-#{$suffix}-pull-#{$i}{ left: $i / $columns * 100%; }
 	}
 }
 

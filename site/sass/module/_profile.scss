@@ -1,13 +1,10 @@
 @import "compass/css3/box-shadow";
 
 .profile{
-    height: 128px;
-    width: 128px;
-    margin-top: -64px;
+    height: $profile-size;
+    width: $profile-size;
+    margin-top: -($profile-size / 2);
     margin-left: 5%;
-    //display:block;
-    //@include clearfix;
-
 }
 .profile-img{
     max-width: 100%;
@@ -16,6 +13,6 @@
     border-color: $YELLOW;
     border-style: solid;
     border-radius: 50%;
-	background:url(img/profile128.jpg) no-repeat;
+	background:url(img/profile64.jpg) no-repeat;
     @include single-box-shadow(4px, 9px, 15px, 6px, $shadow-strong);
 }

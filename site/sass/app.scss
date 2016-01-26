@@ -7,8 +7,17 @@
 /* Variables */
 $shadow: rgba(#333333, 0.54);
 $shadow-strong: rgba(#333333, 0.87);
+/* TEXT DESIGN */
 $text: rgba(#000, 0.54);
 $text-strong: rgba(#000, 0.87);
+$text-offset: 10px!default;
+
+$font-size-header-title: 12px;
+$line-height-header-title: 36px;
+
+$font-size-header-quote: 10px;
+$line-height-header-quote: 16px;
+
 /* COLOR THEME */
 $YELLOW: #FDD835;
 $PINK: #e7356e;
@@ -18,8 +27,9 @@ $GREEN: #1d9370;
 $PURPLE: #8E24AA;
 $WHITE: #fafafa;
 $WHITE-BACKGROUND: #FAFAFA;
-$profile-height: 128px;
-$header-height: 33.33%;
+
+$profile-size: 64px;
+$header-height: 13%;
 $footer-height: 2%;
 $container-height: (100% - $footer-height - $header-height);
 
@@ -30,3 +40,5 @@ $container-height: (100% - $footer-height - $header-height);
 @import "module/nav";
 @import "module/section";
 @import "module/footer";
+
+//@media 

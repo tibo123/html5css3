@@ -1,11 +1,12 @@
 //@import "compass/css3/transition";
 
 .header{
-	color: #FFF;
-	text-align: center;
-	width: 95%;
+	color: #FFF;	
 	height: $header-height;
-
+	//min-height:135px;
+	margin-right: 5%;
+	padding-right: 5%;
+	padding-left: 5%;
     border: 1px 1px 0 0 solid $shadow;
 	border-radius: 0 0 5.5125px 0;
     overflow: hidden;
@@ -18,72 +19,27 @@
 .header-title{
 	color: $text;
  	font-weight: 700;
- 	font-size: 24px;
- 	letter-spacing: -2px;
+ 	font-size: $font-size-header-title;
 	font-family: 'Roboto', sans-serif;
+ 	letter-spacing: -2px;
  	text-transform: uppercase;
-
-    margin-left: 5%;
-    margin-right: 5%;
+	text-align: center;
+ 	line-height: $line-height-header-title;
+    & > h1{
+    	margin-top: 0;
+    	margin-bottom: 0;
+    }
 }
 .header-quote{
 	color: $text;
  	font-weight: 400;
- 	font-size: 16px;
+ 	font-size: $font-size-header-quote;
+ 	line-height: $line-height-header-quote;
 	font-family: 'Open Sans', sans-serif;
  	letter-spacing: -1px;
  	text-align: left;
-
-    margin-left: 15%;
-    margin-right: 5%;
-    padding-left: 5%;
+    padding-right: $profile-size;
+    padding-left: $text-offset;
+    margin-left: $profile-size;
 	border-left: 4px solid $YELLOW;
 }
-
-// .header-logo{
-// 	display: block;
-// 	float: left;
-// }
-// .header-baseline{
-// 	margin: 214px 0 80px 0;
-
-// 	font-weight: 300;
-// 	font-size: 40px;
-// 	letter-spacing: -1px;
-// 	text-transform: uppercase;
-// }
-// .header-baseline-l{
-// 	display: block;
-// 	line-height: 57px;
-// }
-// .header-baseline-l2{
-// 	font-weight: 700;
-// 	font-size: 70px;
-// 	line-height: 80px;
-// }
-// .header-baseline-l3{
-// 	font-size: 40px;
-// 	line-height: 70px;
-// }
-
-/*MENU*/
-
-/* .menu{
-	margin-top: 65px;
-
-	font-size: 18px;
-	font-weight: 600;
-	text-align: right;
-	float: right;
-}
-.menu-item{
-	@include transition-duration(0.4);
-	&:before{
-		display: inline-block;
-		padding: 0 37px;
-	}
-	&:first-child:before{
-		display: none;
-	}
-	&:hover,&.is-active{ color: #000; }
-} */
