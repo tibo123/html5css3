@@ -4,7 +4,7 @@ $gutter: 20px!default;
 $medium: 640px;
 $large: 1024px;
 .container{
-	// min-height: $container-height;
+	min-height: $container-height;
 	margin-top: -($profile-size / 2);
 	padding-top: ($profile-size / 2);
 	position: relative;

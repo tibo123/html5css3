@@ -6,8 +6,6 @@
         color: $text;
         background-color: #{$color-value};
         @include background-image(linear-gradient(to bottom right, $color-value, $shadow));
-        // @include single-box-shadow(4px, 4px, 20px, 3px, $shadow);
-    // @include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
     }
 }
 
@@ -26,36 +24,36 @@
         padding-left: 0;
         & > li{ /* will style only the top level li */
             width: 100%;
-            height: 60px;
+            // height: 60px;
             list-style: none;
-            display: inline-block;
-            line-height: 1;
-            border-radius: 5.5125px;
+            // display: inline-block;
+            // line-height: 1;
+            // border-radius: 5.5125px;
             border: 1px solid $shadow;
             & > a{
-                color:inherit;
+                // color:inherit;
                 text-decoration:none !important;
-                font-size:60px;
+                font-size: 24px;
                 font-weight: 700;
-                letter-spacing: -2px;
+                // letter-spacing: -2px;
                 font-family: 'Roboto', sans-serif;
                 text-transform: uppercase;
                 height: 60px;
-                display: block;
+                // display: block;
+                // & i{
+                //     font-size:24px;
+                // }
                 & > span{
-                    vertical-align: top;
+                    // vertical-align: top;
                 }
             }
         }
-    }
-    & i{
-                    font-size:60px;
     }
     & li{
         width: 100%;
     }
 
-    @include color-new('green', $green);
+    @include color-new('green', $green);//rgba($green, 0.3%));
     @include color-new('pink', $pink);
     @include color-new('blue', $blue);
     @include color-new('yellow', $yellow);
