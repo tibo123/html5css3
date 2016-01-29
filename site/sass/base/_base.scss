@@ -57,6 +57,12 @@ h3{
     font-size: $font-size-h3;
     text-align: left;
 }
+h4{
+	@extend %h;
+    font-weight: 400;
+    font-size: $font-size-h4;
+    text-align: left;
+}
 p{
 	padding: 0;
 	margin: 0;
