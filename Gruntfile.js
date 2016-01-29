@@ -2,7 +2,7 @@ var serveStatic = require('serve-static');
 var serveIndex = require('serve-index');
 // This is the default port that livereload listens on;
 // change it if you configure livereload to use another port.
-var LIVERELOAD_PORT = 35729;
+var LIVERELOAD_PORT = 35728;
 // lrSnippet is just a function.
 // It's a piece of Connect middleware that injects
 // a script into the static served html.
@@ -34,7 +34,7 @@ module.exports = function(grunt){
 		    options: {
 		      // The server's port, and the folder to serve from:
 		      // Ex: 'localhost:9000' would serve up 'dist/index.html'
-		      port: 9000,
+		      port: 9001,
 		      base:'dist',
 		      // Custom middleware for the HTTP server:
 		      // The injected JavaScript reloads the page.
@@ -58,7 +58,7 @@ module.exports = function(grunt){
 		  },
           html: {
             // Watch all js in working directory.
-            files: ['site/*.html'],
+            files: ['site/ihome.html'],
             // Check then minify js to dist directory
             tasks:['copy:html'],
           },

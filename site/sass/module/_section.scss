@@ -1,60 +1,36 @@
 @import "compass/css3/transform";
 
-.section{
-    color: $text;
-	margin-left: 5%;
-	margin-right: 5%;
-    //border: 1px 1px 0 0 solid $shadow;
-	//border-radius: 0 0 5.5125px 0;
-	z-index: 5;
-	position: relative;
-    overflow: hidden;
-    background-color: $white;
-	
-	@include background-size(cover);
-    @include single-box-shadow(4px, 4px, 20px, -6px, $shadow);
+.container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
 
-
-	// &:before, &:after{
-	// 	content: '';
-	// 	display: block;
-	// 	//background-color: rgba(#FF0000, 0.4);
-	// 	background-color: #FFF;
-
-	// 	position: absolute;
-	// 	top: 0; left: 0; right: 0; bottom: 0;
-	// 	z-index: 4;
-		
-	// 	@include transform-origin(0, 0);
-	// 	@include transform(skewY(-2deg));
-	// }
-	// &:after{
-	// 	background-color: #FFF;
-	// 	@include transform-origin(100%, 0);
-	// }
+    min-height: $section-height;
 }
-.section-title{
-	@include clearfix;
-	h1{
-		float: left;
-		width: 180px;
-		margin: 0;
-		padding: 0 20px 0 0;
+%article{
+    flex: 1 1 auto;
+    min-height: 100%;
 
-		text-align: right;
-		text-transform: uppercase;
-		color: #000;
-		line-height: 45px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+}
 
-		border-right: 4px solid $blue;
-	}
-	p{
-		float: right;
-		width: 950px;
-		margin: 0;
-		padding: 0;
+.article-resume{
+    @extend %article;
 
-		line-height: 25px;
-		text-transform: uppercase;
-	}
+    & > .article-resume-title-purple{
+        background-color: $purple;
+        @include background-size(cover);
+    }
+    & > .article-resume-article{
+        padding-left: 16px;
+        padding-right: 16px;
+        & > .article-resume-article-title-purple{
+            color: $purple;
+
+        }
+    }
 }

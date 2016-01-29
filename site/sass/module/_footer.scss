@@ -1,13 +1,17 @@
-//@import "compass/layout/sticky-footer";
+@import "../layout/flex";
 
 .footer{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
  //position: relative;
  //z-index: 10;
  //height: 3em;
  //margin-top: -3em;
 
     height: $footer-height;
-    background-color: $white;
+    // background-color: $white;
     @include background-size(cover);
 
     //@include sticky-footer($footer-height);

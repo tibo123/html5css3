@@ -1,0 +1,7 @@
+.flex-container{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    border: 1px solid $purple;
+}

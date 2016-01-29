@@ -9,32 +9,53 @@ html, body{
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 16px;
+	font-size: $font-size-article;
 	line-height: 1.1;
-	font-family: 'Open Sans', sans-serif;
-	color: rgba(#000, 0.87);
+    font-family: 'Roboto', sans-serif;
+	color: $text-strong;
 	
+    display: block;
 	// background-color: $white;
+	& header{
+	    background-color: rgba($blue,0.3);
+		min-height: $header-height;
+	}
+	& footer{
+	    // background-color: rgba($green,0.3);
+		min-height: $footer-height;
+	}
 }
 a{ 
 	color: inherit; 
 	text-decoration: none;
 }
 b { text-transform: uppercase; }
-h1{
-    font-weight: 700;
-    font-family: 'Roboto', sans-serif;
-    font-size: $font-size-header-title;
-    letter-spacing: -1px;
-    text-transform: uppercase;
+%h{
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
 }
+h1{
+	@extend %h;
+	color: $text-strong;
+    font-weight: 700;
+    font-size: $font-size-h1;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
 h2{
-	font-size: 20px;
-	line-height: 1.1;
-	color: $text;
+	@extend %h;
+	color: $white;
+    font-weight: 400;
+    font-size: $font-size-h2;
+    text-align: left;
+    padding-left: 56px;
+}
+h3{
+	@extend %h;
+    font-weight: 400;
+    font-size: $font-size-h3;
+    text-align: left;
 }
 p{
 	padding: 0;

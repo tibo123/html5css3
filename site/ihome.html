@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -19,42 +19,43 @@
         <![endif]-->
         
         <header class="header">
+            <div class="profile">
+                <div class="profile-img"></div>
+            </div>
             <div class="header-content">
                 <div class="header-title">
                     <h1>thibault balthazard</h1>
                 </div>
-                <div class="header-quote">
-                    <quote>
+                <div class="header-subtitle">
+                    <span>
                         <b>JEE senior developer.</b>
-                    </quote>
+                    </span>
                 </div>
             </div>
         </header>
-        <div class="profile">
-            <div class="profile-img"></div>
-        </div>
         <div class="container">
-        <i class="material-icons">face</i>
-        <nav class="nav">
-            <ul>
-                <li class="green">
-                    <a class="" href="#"><i class="material-icons">face</i><span>bio</span></a>
-                </li>
-                <li class="green">
-                    <a class="" href="#"><i class="material-icons">face</i><span>bio</span></a>
-                </li>
-                <li class="pink">
-                    <a class="" href="#"><i class="material-icons">face</i><span>projects</span></a>
-                </li>
-                <li class="yellow">
-                    <a class="" href="#"><i class="material-icons">face</i><span>about</span></a>
-                </li>
-                <li class="purple">
-                    <a class="" href="#"><i class="material-icons">face</i><span>other</span></a>
-                </li>
-            </ul>
-        </nav>
-
+        <!-- TODO switch order : article > section -->
+            <article class="article-resume">
+                <header class="article-resume-title-purple"><h2>Resume</h2></header>
+                <article class="article-resume-article">
+                    <div class="article-resume-article-title-purple">
+                        <h3>Experiences</h3>
+                    </div>
+                    <section class="section-experience">
+                        <header class="section-experience-title"><h4>VOO</h4></header>
+                        <span>
+VOO is a Belgian company which offers Internet access, telephony and television services. I worked for the ESB team which handle data flows between external partners and the VOO's different entities, like Subscription management, product management proposed by VOO (internet box, cellular...)<br>
+<br>
+● Development of features for an ESB with OSGi technology.<br>
+● Development of services SOAP, REST and jms.<br>
+● Connection to different backends SQLserver, Hazelcast, Jira and external partner web services.<br>
+● Code review, technical support for junior<br>
+<br>
+JEE, Camel, OSGi, SOAP, REST, jms, Spring, ibatis, Maven, Pax Exam, Karaf, SCRUM, Kanban<br>
+                        </span>
+                    </section>
+                </article>
+            </article>
         </div>
         <footer class="footer">
 

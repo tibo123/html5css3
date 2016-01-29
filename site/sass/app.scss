@@ -8,36 +8,34 @@
 $shadow: rgba(#333333, 0.54);
 $shadow-strong: rgba(#333333, 0.87);
 /* TEXT DESIGN */
-$text: rgba(#000, 0.54);
+$text: #212121;
 $text-strong: rgba(#000, 0.87);
 $text-offset: 10px!default;
 
-$font-size-header-title: 22px;
-// $line-height-header-title: 36px;
-
-$font-size-header-quote: 14px;
-// $line-height-header-quote: 16px;
+$font-size-h1: 22px;
+$font-size-h2: 18px;
+$font-size-h3: 20px;
+$font-size-article: 14px;
+$font-size-article-title: 14px;
 
 $background-img: 'pepper320.jpg';
 
 /* COLOR THEME */
-$yellow: #FDD835;
+$yellow: #fdd835;
 $pink: #e7356e;
-$blue: #0277BD;
-$blue-darker: #01579B;
+$blue: #0277bd;
+$blue-darker: #01579b;
 $green: #1d9370;
-$purple: #8E24AA;
+$purple: #8e24aa;
 $white: #fafafa;
 
 $profile-size: 64px;
-$header-height: 13%;
+$header-height: 18%;
 $footer-height: 2%;
-$container-height: (100% - $footer-height - $header-height);
+$section-height: (100% - $footer-height - $header-height);
 
 @import "base/base";
-@import "layout/responsivegrid";
 @import "module/header";
-@import "module/profile";
 @import "module/nav";
 @import "module/section";
 @import "module/footer";

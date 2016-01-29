@@ -1,43 +1,67 @@
-//@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
 
 .header{
-	// color: $text;
-	height: $header-height;
-	// margin-right: 5%;
-	// padding-right: 5%;
-	// padding-left: 5%;
+
+    // color: $text;
+    height: $header-height;
+    // margin-right: 5%;
+    // padding-right: 5%;
+    // padding-left: 5%;
     border: 1px 1px 0 0 solid $shadow;
     overflow: hidden;
 
-	background:url(img/$background-img) top;
-	@include background-size(cover);
-	@include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
+    background:url(img/$background-img) top;
 
-	@include clearfix;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    @include background-size(cover);
+    @include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
+    @include clearfix;
 }
 
+.profile{
+    height: $profile-size;
+    width: $profile-size;
+    margin-bottom:  2.5%;
+    margin-left: 2.5%;
+
+    // flex: 64px;
+    align-self: flex-end;
+}
+.profile-img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-color: $blue-darker;
+    border-style: solid;
+    border-radius: 50%;
+    background:url(img/profile64.jpg) no-repeat;
+    @include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
+}
 .header-content{
- 	text-align: left;
-	position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
 
     & .header-title{
-        margin-top: 2px;
-        margin-left: 25%;
-
+        margin-top: 2%;
+        padding-left: 4px;
         border-left: 4px solid $blue-darker;
-        background-color: rgba($white, 1); 
+        background-color: rgba($white, 1);
     }
-    & .header-quote{
+    & .header-subtitle{
         font-weight: 400;
-        font-size: $font-size-header-quote;
-        // font-family: 'Open Sans', sans-serif;
         letter-spacing: -1px;
 
         margin-top: 2px;
-        margin-left: 25%;
-        padding-left: 2%;
+        padding-left: 4px;
 
         border-left: 4px solid $blue-darker;
-        background-color: rgba($white, 1); 
+        background-color: rgba($white, 1);
     }
 }
