@@ -1,7 +1,24 @@
-.flex-container{
+%flex-container{
     display: -webkit-flex;
     display: flex;
+}
+.flex-container-row-nowrap{
+    @extend %flex-container;
     -webkit-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    border: 1px solid $purple;
+}
+.flex-container-row-wrap{
+    @extend %flex-container;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.flex-container-column-nowrap{
+    @extend %flex-container;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+}
+.flex-container-column-wrap{
+    @extend %flex-container;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
 }

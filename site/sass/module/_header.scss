@@ -1,21 +1,12 @@
 @import "compass/css3/box-shadow";
 
 .header{
-
-    // color: $text;
     height: $header-height;
-    // margin-right: 5%;
-    // padding-right: 5%;
-    // padding-left: 5%;
     border: 1px 1px 0 0 solid $shadow;
     overflow: hidden;
 
     background:url(img/$background-img) top;
 
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row nowrap;
-    flex-flow: row nowrap;
     justify-content: space-between;
 
     @include background-size(cover);
@@ -26,10 +17,9 @@
 .profile{
     height: $profile-size;
     width: $profile-size;
-    margin-bottom:  2.5%;
+    margin-bottom: 2.5%;
     margin-left: 2.5%;
 
-    // flex: 64px;
     align-self: flex-end;
 }
 .profile-img{
@@ -43,11 +33,6 @@
     @include single-box-shadow(4px, 4px, 15px, 3px, $shadow);
 }
 .header-content{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: column nowrap;
-    flex-flow: column nowrap;
-
     & .header-title{
         margin-top: 2%;
         padding-left: 4px;

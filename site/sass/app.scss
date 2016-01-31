@@ -37,8 +37,12 @@ $footer-height: 2%;
 $section-height: (100% - $footer-height - $header-height);
 
 @import "base/base";
+@import "layout/flex";
+@import "layout/accordion";
 @import "module/header";
 @import "module/nav";
+@import "module/content";
+@import "module/article";
 @import "module/section";
 @import "module/footer";
 

@@ -1,0 +1,19 @@
+
+// %article{
+//     // flex: 1 1 auto;
+// }
+
+.article-resume{
+
+    & > .article-resume-title-purple{
+        background-color: $purple;
+        @include background-size(cover);
+    }
+    & > .article-resume-article{
+        padding-left: 16px;
+        padding-right: 16px;
+        & > .article-resume-article-title-purple{
+            color: $purple;
+        }
+    }
+}
