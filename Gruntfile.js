@@ -58,7 +58,7 @@ module.exports = function(grunt){
 		  },
           html: {
             // Watch all js in working directory.
-            files: ['site/ihome.html'],
+            files: ['site/resume.html'],
             // Check then minify js to dist directory
             tasks:['copy:html'],
           },
