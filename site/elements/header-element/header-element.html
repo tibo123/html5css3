@@ -1,0 +1,165 @@
+<dom-module id="header-element">
+  <style>
+    :host {
+      height: 100%;
+      display: block;
+      @apply(--police);
+      @apply(--box-shadow);
+      --transition-color-noop: rgba(1, 87, 155, 0);
+      --transition-color: rgba(1, 87, 155, 1);
+      --transition-color-hex: '#01579b';
+      color: var(--text-white-strong);
+      text-shadow: 0 0 3px rgba(0,0,0,.8);
+    }
+    h1{
+      font-weight: 700;
+      font-size: var(--font-size-h1);
+      text-rendering: optimizelegibility;
+      text-transform: uppercase;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    h4{
+      font-weight: 700;
+      font-size: var(--font-size-h4);
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .content{
+      height: 100%;
+      @apply(--flex-layout-column-nowrap);
+      background:url(../../css/img/background2048.jpg) fixed;
+      @apply(--background-size-cover);
+    }
+    .upper-content{
+      height: 100%;
+      @apply(--flex-layout-column-nowrap);
+      justify-content: flex-end;
+    }
+    .profile{
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .profile-img{
+      background:url(../../css/img/profile128.jpg) no-repeat;
+      @apply(--box-sizing-border-box);
+    }
+    .title{
+      padding-left: 5px;
+      @apply(--flex-layout-column-nowrap);
+      -ms-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      align-items: center;
+      justify-content: center;
+    }
+    .header-title{
+      margin-top: 2%;
+      padding-left: 4px;
+    }
+    .header-subtitle{
+      margin-top: 2px;
+      padding-left: 4px;
+    }
+    .header-title.home, .header-subtitle.home{
+      border-left: 4px solid var(--blue-darker);
+    }
+    .profile.home{
+      background: -moz-linear-gradient(to right, rgba(1, 87, 155, 1), rgba(1, 87, 155, 1) 30%, rgba(1, 87, 155, 0) 30%, rgba(1, 87, 155, 0));
+      background: -webkit-linear-gradient(to right, rgba(1, 87, 155, 1), rgba(1, 87, 155, 1) 30%, rgba(1, 87, 155, 0) 30%, rgba(1, 87, 155, 0));
+      background: linear-gradient(to right, rgba(1, 87, 155, 1), rgba(1, 87, 155, 1) 30%, rgba(1, 87, 155, 0) 30%, rgba(1, 87, 155, 0));
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01579b00'), endColorstr='#01579b',GradientType=0 );
+    }
+    .header-title.skills, .header-subtitle.skills{
+      border-left: 4px solid var(--pink);
+    }
+    .header-title.about, .header-subtitle.about{
+      border-left: 4px solid var(--yellow);
+    }
+    .disclaimer{
+      padding: 10px;
+      padding-left: 22%;
+    }
+    .disclaimer p{
+      color: var(--text-white-strong);
+      margin-top: 3px;
+      margin-bottom: 2px;
+    }
+    .disclaimer p:first-child{
+      margin-top: 128px;
+    }
+  </style>
+
+  <template>
+    <div class="content">
+      <div class="upper-content">
+        <div class="title">
+          <div class="header-title">
+            <h1>thibault balthazard</h1>
+          </div>
+          <div class="header-subtitle">
+            <h4>Senior developer.</h4>
+          </div>
+        </div>
+        <div class="profile">
+          <iron-pages attr-for-selected="data-route">
+            <section data-route="home">
+              <div class="profile-img">
+              <div class="disclaimer">
+                <p>I live in Paris</p>
+                <p>I like binge watching tv series</p>
+                <p>I am quite good in a kitchen</p>
+                <p>I prefer cats to dogs</p>
+                <p>I like sunny days</p>
+                <p>As much as snowy ones</p>
+                <p>I develop software and I'm good at it</p>
+              </div>
+              </div>
+            </section>
+          </iron-pages>
+      </div>
+      <nav-bar></nav-bar>
+    </div>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'header-element',
+    ready: function(){
+      //bind ironPages componenent to a property
+      this.ironPages = this.$$('iron-pages');
+      this.addEventListener('navBarSelectionChanged', this.handleNavBarSelection);
+    },
+    attached: function(){
+      var items = this.querySelectorAll('nav-item');
+      for(i=items.length-1; i >= 0; i--){
+        if(items[i].selected){
+          console.log('is selected :'+items[i].selected);
+          this.ironPages.select(items[i].link);
+          break;
+        }
+      }
+    },
+    /*
+    http://stackoverflow.com/questions/31362912/dynamic-classes-on-polymer-1-0-elements
+    to do it the declarative way !
+    */
+    handleNavBarSelection: function(e){
+      console.log('handleNavBarSelection new route'+e.target.route);
+      var profile = this.$$('.profile');
+      var title = this.$$('.header-title');
+      var subtitle = this.$$('.header-subtitle');
+      profile.classList.remove('home','skills','about');
+      title.classList.remove('home','skills','about');
+      subtitle.classList.remove('home','skills','about');
+      this.toggleClass(e.target.route, true, profile);
+      this.toggleClass(e.target.route, true, subtitle);
+      this.toggleClass(e.target.route, true, title);
+      this.ironPages.select(e.target.route);
+    }
+  })
+</script>

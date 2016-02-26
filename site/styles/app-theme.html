@@ -1,0 +1,80 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<style is="custom-style">
+  :root {
+    /* Variables */
+    --shadow: rgba(51, 51, 51, 0.54);
+    --shadow-strong: rgba(51, 51, 51, 0.87);
+    /* TEXT DESIGN */
+    --text-strong: rgba(0, 0, 0, 0.87);
+    --text-light: rgba(0, 0, 0, 0.54);
+    --text-white-strong: rgba(250, 250, 250, 0.87);
+    --text-white-light: rgba(250, 250, 250, 0.54);
+    --text-offset: 10px!default;
+
+    --font-size-h1: 22px;
+    --font-size-h2: 18px;
+    --font-size-h3: 20px;
+    --font-size-h4: 16px;
+    --font-size-article: 16px;
+
+    --background-img: '../css/img/background2048.jpg';/*'pepper320.jpg';*/
+
+    /* COLOR THEME */
+    --yellow: rgb(253, 216, 53);/*#fdd835;*/
+    --pink: rgb(231, 53, 110);/*#e7356e;*/
+    --blue: rgb(2, 119, 189);/*#0277bd;*/
+    --blue-darker: rgb(1, 87, 155);/*#01579b;*/
+    --green: rgb(29, 147, 112);/*#1d9370;*/
+    --purple: rgb(142, 36, 170);/*#8e24aa;*/
+    --white: rgb(250, 250, 250);/*#fafafa;*/
+
+    /*Default Layout size : home theme */
+    --profile-size: 128px;
+    --header-height: 80%;
+    --main-content-height: 18%;
+    --footer-height: 2%;
+    --left-box-width: 0%;
+    --col-box-width: 100%;
+
+    /*Layout size : by theme */
+    --home-header-height: 80%;
+    --home-main-content-height: 18%;
+    --home-left-box-width: 0%;
+    --home-col-box-width: 100%;
+    --skills-header-height: 28%;
+    --skills-main-content-height: 70%;
+    --skills-left-box-width: 0%;
+    --skills-col-box-width: 100%;
+    --about-header-height: 35%;
+    --about-main-content-height: 63%;
+    --about-col-box-width: 80%;
+    --about-left-box-width: 20%;
+
+    --paper-material-elevation: 3;
+
+  /*Effects*/
+    --about-yellow-fade-in:{
+      background: -moz-linear-gradient(to left, var(--yellow),var(--yellow) 30%, var(--white) 30%, var(--white));
+      background: -webkit-linear-gradient(to left, var(--yellow),var(--yellow) 30%, var(--white) 30%, var(--white));
+      background: linear-gradient(to left, var(--yellow),var(--yellow) 30%, var(--white) 30%, var(--white));
+      -webkit-transition: background 6s linear;
+         -moz-transition: background 6s linear;
+          -ms-transition: background 6s linear;
+           -o-transition: background 6s linear;
+              transition: background 6s linear;
+    };
+  }
+  * {
+    @apply(--box-sizing-border-box);
+  }
+</style>

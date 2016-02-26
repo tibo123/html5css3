@@ -1,0 +1,82 @@
+{
+  "info": "CV",
+  "skills": [{
+    "group":"Frontend",
+    "list": [{
+        "name":"html5",
+        "url": ""
+      },{
+        "name":"CSS / Sass",
+        "url": ""
+      },{
+        "name":"polymer",
+        "url": ""
+      },{
+        "name":"GWT / GXT",
+        "url": ""
+      },{
+        "name":"Grunt",
+        "url": ""
+      },{
+        "name":"Bower",
+        "url": ""
+      }]
+  }, {
+    "group":"Backend",
+    "list": [{
+      "name":"JEE",
+      "url": ""
+    },{
+      "name":"Camel",
+      "url": ""
+    },{
+      "name":"OSGi",
+      "url": ""
+    },{
+      "name":"SOAP",
+      "url": ""
+    },{
+      "name":"REST",
+      "url": ""
+    },{
+      "name":"jms",
+      "url": ""
+    },{
+      "name":"Spring",
+      "url": ""
+    },{
+      "name":"SpringBoot",
+      "url": ""
+    },{
+      "name":"JPA",
+      "url": ""
+    }]
+  }, {
+    "group":"Continuous integration",
+    "list": [{
+      "name":"Maven",
+      "url": ""
+    },{
+      "name":"jenkins",
+      "url": ""
+    },{
+      "name":"nexus",
+      "url": ""
+    },{
+      "name":"svn",
+      "url": ""
+    },{
+      "name":"git",
+      "url": ""
+    }]
+  }, {
+    "group":"Servers",
+    "list": [{
+      "name":"Tomcat",
+      "url": ""
+    },{
+      "name":"Karaf",
+      "url": ""
+    }]
+  }]
+}

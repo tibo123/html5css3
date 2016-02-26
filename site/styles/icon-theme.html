@@ -1,0 +1,43 @@
+<style is="custom-style">
+  :root {
+
+      .social-media-bar{
+        @apply(--flex-layout-row-wrap);
+        justify-content: space-around;
+      }
+      /*.social-media-bar a{
+        display: block;
+      }*/
+    .icon {
+      height: 128px;
+      width: 128px;
+    }
+    .icon-github {
+      background:url(../css/img/icon-github-64.png) no-repeat;
+      /*color: #26d991;
+      fill: #26d991;*/
+    }
+    /*.icon-github:hover {
+      background: #26d991;
+    }*/
+    .icon-linkedin {
+      background:url(../css/img/icon-linkedin-64.png) no-repeat;
+/*      color: #2691d9;
+      fill: #2691d9;*/
+    }
+    /*.icon-linkedin:hover {
+      background: #2691d9;
+    }*/
+    .icon-github:hover, .icon-linkedin:hover {
+      border-radius: 100%;
+      color: #0e1a25;
+      fill: #0e1a25;
+      -webkit-transform: scale(1.25);
+              transform: scale(1.25);
+      -webkit-transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+      transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+      transition: background-color 0.5s, transform 0.5s ease-out;
+      transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    }
+  }
+</style>

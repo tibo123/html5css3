@@ -1,0 +1,85 @@
+<dom-module id="nav-item">
+  <style>
+    :host {
+      /*border-style: inset;*/
+      display: block;
+      @apply(--police);
+      -ms-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      align-items: center;
+      @apply(--box-sizing-border-box);
+      background-color: var(--background-color-a, rgba(250, 250, 250, .54));
+      @apply(--flex-layout-column-nowrap);
+    }
+    :host:hover{
+      background-color: var(--background-color-a-hover, rgba(250, 250, 250, .87));
+      cursor: pointer;
+    }
+    :host[selected]{
+      background-color: var(--background-color-a-hover, rgba(250, 250, 250, .87));
+    }
+    :host[selected].top .top{
+      background-color: var(--nav-item-color);
+    }
+    :host[selected].bottom .bottom{
+      background-color: var(--nav-item-color);
+    }
+    .top{
+      height: 4px;
+      min-height: 4px;
+      width: 100%;
+      -ms-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      @apply(--box-sizing-border-box);
+    }
+    .bottom{
+      height: 4px;
+      min-height: 4px;
+      width: 100%;
+      -ms-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      @apply(--box-sizing-border-box);
+    }
+    a{
+      width: 100%;
+      text-decoration: none !important;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700;
+      color: var(--text-strong, rgba(0, 0, 0, 0.87));
+      font-size: var(--font-size-h4);
+      @apply(--box-sizing-border-box);
+    }
+  </style>
+
+  <template>
+    <a data-route="[[link]]" href$="{{baseUrl}}[[link]]" on-click="select">
+      <div class="top"></div>
+        <content></content>
+      <div class="bottom"></div>
+    </a>
+  </template>
+
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'nav-item',
+    properties: {
+      link: String,
+      selected: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true
+      }
+    },
+    select: function(){
+      this.selected = true;
+      console.log("nav-item "+this.link+' selected '+this.selected);
+      this.fire("navItemSelected");
+    }
+  });
+</script>

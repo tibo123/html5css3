@@ -1,0 +1,89 @@
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="nav-bar">
+  <style>
+    :host {
+      display: block;
+      @apply(--police);
+      --background-color-a: rgba(250, 250, 250, .54);
+      --background-color-a-hover: rgba(250, 250, 250, .87);
+    }
+    .content{
+      @apply(--flex-layout-row-nowrap);
+    }
+    .nav-home{
+      --nav-item-color: var(--blue-darker);
+    }
+    .nav-skills{
+      --nav-item-color: var(--pink);
+    }
+    .nav-about{
+      --nav-item-color: var(--yellow);
+    }
+    .separator{
+      border-right: 1px solid var(--text-light, rgba(0, 0, 0, .54));
+    }
+  </style>
+
+  <template>
+    <nav class="content" attr-for-selected="data-route">
+      <nav-item class="nav-home top" link="home">home</nav-item>
+      <div class="separator"></div>
+      <nav-item class="nav-skills bottom" link="skills">skills</nav-item>
+      <div class="separator"></div>
+      <nav-item class="nav-about bottom" link="about">about</nav-item>
+    </nav>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'nav-bar',
+    Properties: {
+      route: {
+        type: String
+      }//https://www.polymer-project.org/1.0/docs/devguide/data-binding.html
+    },
+    ready: function(){
+      /*Add a listener to know when the selected nav-item is changed and act accordingly throught switchSelected function*/
+      this.addEventListener('navItemSelected',this.switchSelected);
+    },
+    attached: function(){
+      var items = this.querySelectorAll('nav-item');
+      this.route = 'home';
+      console.log('document.URL : '+document.URL);
+      var isSelected = false;
+      for(i=0; i < 3; i++){
+        console.log('attached nav-bar : '+items[i].link+' '+items[i].selected);
+        if(items[i].link && document.URL.indexOf(items[i].link) >= 0){
+          this.route = items[i].link;
+          items[i].toggleAttribute('selected');
+          isSelected = true;
+          break;
+        }
+      }
+      if(!isSelected){
+        this.getNavItem(this.route).toggleAttribute('selected');
+      }
+      this.fireRefreshEvent();
+    },
+    switchSelected: function(e){
+      if(this.route !== e.target.link) {
+        console.log('switchSelected '+e.target.link+' '+e.target.selected);
+        this.attributeFollows('selected', e.target, this.getNavItem(this.route));
+        this.route = e.target.link;
+        this.fireRefreshEvent();
+      }
+    },
+    getNavItem: function(linkValue){
+      return this.$$('nav-item[link="'+linkValue+'"]');
+    },
+    fireRefreshEvent: function(){
+      console.log('fireRefreshEvent TODO optimize');
+      this.fire('navBarSelectionChanged');
+      // this.fire('onNavSwitchLayout');
+      // this.fire('navTo');
+    }
+  });
+</script>

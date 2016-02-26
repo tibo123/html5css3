@@ -1,0 +1,140 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-collapse/iron-collapse.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+
+<dom-module id="resume-jobs">
+  <style>
+    :host {
+      display: block;
+      box-sizing: border-box;
+    }
+    h4{
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+    .title{
+      width: 100%;
+      text-align: left;
+      margin: 0;
+
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
+    }
+    time.start {
+      font-weight: 700;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+    time.start:before {
+      content: "from ";
+    }
+    time.end {
+      font-weight: 700;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+    time.end:before {
+      content: "to ";
+    }
+  </style>
+
+  <template>
+      <div class="element">
+        <div on-click="toggle">
+          <div class="title">
+            <h4>{{job.role}} - {{job.company}}</h4>
+            <div>
+              <time class="start" datetime="{{startdate}}">{{job.startdate}}</time>
+              <time class="end" datetime="{{enddate}}">{{job.enddate}}</time>
+            </div>
+          <iron-icon icon="icons:expand-more"></iron-icon>
+          </div>
+        </div>
+        <iron-collapse tabindex="0">
+          <div class="collapsible-content">
+            <p>{{job.description}}</p>
+            <ul>
+              <template is="dom-repeat" items="{{job.tasks}}">
+                <li>{{item.task}}</li>
+              </template>
+            </ul>
+          </div>
+        </iron-collapse>
+      </div>
+  </template>
+
+</dom-module>
+
+<script>
+
+  Polymer({
+    is: 'resume-jobs',
+    properties: {
+      id: {
+        type: Number,
+        value: 0
+      },
+      job: {
+        type: Object,
+        value: function() {
+          return {
+            role: 'Developer',
+            company: 'CompanyName',
+            startdate: '2014-01-02',
+            enddate: '2015-12-31',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            tasks: {
+              type: Object,
+              value: function() {
+                task: 'one task'
+              }
+            },
+          };
+        }
+      }
+    },
+    toggle: function(e) {
+      this.$$('iron-icon').icon = (this.$$('iron-icon').icon == 'icons:expand-more' ? 'icons:expand-less' : 'icons:expand-more');
+      console.log(this.$$('iron-icon').icon);
+      this.$$('iron-collapse').toggle();
+    },
+
+    // Element Lifecycle
+
+    ready: function() {
+      // `ready` is called after all elements have been configured, but
+      // propagates bottom-up. This element's children are ready, but parents
+      // are not.
+      //
+      // This is the point where you should make modifications to the DOM (when
+      // necessary), or kick off any processes the element wants to perform.
+    },
+
+    attached: function() {
+      // `attached` fires once the element and its parents have been inserted
+      // into a document.
+      //
+      // This is a good place to perform any work related to your element's
+      // visual state or active behavior (measuring sizes, beginning animations,
+      // loading resources, etc).
+      // alert('attached');
+    },
+
+    detached: function() {
+      // The analog to `attached`, `detached` fires when the element has been
+      // removed from a document.
+      //
+      // Use this to clean up anything you did in `attached`.
+    }
+  });
+</script>

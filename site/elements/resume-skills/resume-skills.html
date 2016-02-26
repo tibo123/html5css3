@@ -1,0 +1,67 @@
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="resume-skills">
+  <style include="shared-styles">
+    :host {
+      width: 100%;
+      height: 100%;
+      display: block;
+      box-sizing: border-box;
+    }
+    .content{
+      @apply(--flex-layout-column-nowrap);
+      text-align: center;
+      @apply(--box-sizing-border-box);
+    }
+    .header{
+      padding-top: 10px;
+      color: var(--pink);
+    }
+    .list{
+      padding-top: 2px;
+      padding-left: 2px;
+      @apply(--flex-layout-row-wrap);
+      -webkit-justify-content: flex-start; 
+      justify-content: flex-start; 
+    }
+    .skill{
+      border: 2px solid rgba(0, 0, 0, 0.54);
+      padding-top: 2px;
+      padding-bottom: 2px;
+      padding-right: 2px;
+      padding-left: 2px;
+      border-radius: 10%;
+      margin-top: 2px;
+      margin-right: 2px;
+      color: rgba(0, 0, 0, 0.54);
+      font-weight: 700;
+      text-align: center;
+      @apply(--box-sizing-border-box);
+    }
+  </style>
+  <template>
+    <iron-ajax auto url="../../json/skills.json" handle-as="json" last-response="{{data}}"></iron-ajax>
+    <div class="content">
+      <paper-material>
+        <template is="dom-repeat" items="[[data.skills]]" as="category">
+          <!-- <resume-skills category='{{category}}'></resume-skills> -->
+            <div class='element'>
+              <div class='header'>
+                <h4>{{category.group}}</h4>
+              </div>
+              <div class='list'>
+                <template is="dom-repeat" items="{{category.list}}">
+                  <div class="skill">{{item.name}}</div>
+                </template>
+              </div>
+            </div>
+        </template>
+      </paper-material>
+    </div>
+  </template>
+</dom-module>
+<script>
+  Polymer({
+    is: 'resume-skills'
+  });
+</script>
