@@ -3,80 +3,110 @@
   "skills": [{
     "group":"Frontend",
     "list": [{
-        "name":"html5",
-        "url": ""
-      },{
-        "name":"CSS / Sass",
-        "url": ""
-      },{
-        "name":"polymer",
-        "url": ""
-      },{
-        "name":"GWT / GXT",
-        "url": ""
-      },{
-        "name":"Grunt",
-        "url": ""
-      },{
-        "name":"Bower",
-        "url": ""
-      }]
+      "name":"HTML5",
+      "url": "",
+      "expertise":true
+    },{
+      "name":"CSS3 / Sass",
+      "url": "",
+      "expertise":true
+    },{
+      "name":"GWT / GXT",
+      "url": "",
+      "expertise":true
+    },{
+      "name":"Polymer",
+      "url": "",
+      "expertise":false
+    },{
+      "name":"Grunt",
+      "url": "",
+      "expertise":false
+    },{
+      "name":"Gulp",
+      "url": "",
+      "expertise":false
+    },{
+      "name":"Bower",
+      "url": "",
+      "expertise":false
+    },{
+      "name":"NPM",
+      "url": "",
+      "expertise":false
+    }]
   }, {
     "group":"Backend",
     "list": [{
-      "name":"JEE",
-      "url": ""
-    },{
-      "name":"Camel",
-      "url": ""
-    },{
-      "name":"OSGi",
-      "url": ""
+      "name":"JavaEE",
+      "url": "",
+      "expertise":true
     },{
       "name":"SOAP",
-      "url": ""
+      "url": "",
+      "expertise":true
     },{
       "name":"REST",
-      "url": ""
-    },{
-      "name":"jms",
-      "url": ""
-    },{
-      "name":"Spring",
-      "url": ""
-    },{
-      "name":"SpringBoot",
-      "url": ""
+      "url": "",
+      "expertise":true
     },{
       "name":"JPA",
-      "url": ""
+      "url": "",
+      "expertise":true
+    },{
+      "name":"Spring",
+      "url": "",
+      "expertise":true
+    },{
+      "name":"SpringBoot",
+      "url": "",
+      "expertise":true
+    },{
+      "name":"Camel",
+      "url": "",
+      "expertise":true
+    },{
+      "name":"OSGi",
+      "url": "",
+      "expertise":false
+    },{
+      "name":"JMS",
+      "url": "",
+      "expertise":false
     }]
   }, {
     "group":"Continuous integration",
     "list": [{
       "name":"Maven",
-      "url": ""
+      "url": "",
+      "expertise":true
     },{
-      "name":"jenkins",
-      "url": ""
+      "name":"Jenkins",
+      "url": "",
+      "expertise":true
     },{
-      "name":"nexus",
-      "url": ""
+      "name":"Nexus",
+      "url": "",
+      "expertise":true
     },{
-      "name":"svn",
-      "url": ""
+      "name":"SVN",
+      "url": "",
+      "expertise":true
     },{
-      "name":"git",
-      "url": ""
+      "name":"Git",
+      "url": "",
+      "expertise":false
     }]
   }, {
     "group":"Servers",
     "list": [{
       "name":"Tomcat",
-      "url": ""
+      "url": "",
+      "expertise":true
     },{
       "name":"Karaf",
-      "url": ""
+      "url": "",
+      "expertise":false
     }]
   }]
 }

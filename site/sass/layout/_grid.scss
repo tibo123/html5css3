@@ -1,9 +1,0 @@
-@import "compass/css3/background-size";
-
-.container{
-	width: 1170px;
-	margin: 0 auto;
-	z-index: 5;
-	position: relative;
-	@include clearfix;
-}
